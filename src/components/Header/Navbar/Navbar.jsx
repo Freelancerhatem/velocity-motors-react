@@ -32,7 +32,9 @@ const Navbar = () => {
     <div className="order-2">
     <div className="flex items-center gap-6">
             <div className="flex items-center gap-1"><img src="" alt="" /><h1>name</h1></div>
+            <Link to='/signin'>
             <button  className="btn-xs rounded-md lg:btn bg-white text-blue-400 hover:bg-blue-900 hover:text-white">login</button>
+            </Link>
           </div>
           
     </div>
@@ -49,7 +51,7 @@ const Navbar = () => {
       }
     </div> */}
     <div className="items-center hidden justify-between  w-full md:flex  md:w-auto " id="navbar-cta">
-      <ul className="flex    font-medium  lg:p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul className="flex    font-medium  lg:p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-2 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <NavLink to='/' className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "border-b-2 border-white" : ""
         }>
@@ -75,20 +77,20 @@ const Navbar = () => {
             <button className="block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded" aria-current="page">Services</button>
           </li>
         </NavLink>
-        <NavLink to='/dashboard' className={({ isActive, isPending }) =>
+        <NavLink to='/addproduct' className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "border-b-2 border-white" : ""
         }>
           <li>
 
-            <button className={'block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded'} aria-current="page">Products</button>
+            <button className={'block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded'} aria-current="page">Add Product</button>
           </li>
         </NavLink>
-        <NavLink to='/dashboard' className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "border-b-2 border-white" : ""
+        <NavLink to='/brands' className={({ isActive, isPending }) =>
+          isPending ? "" : isActive ? "border-b-2 border-white" : ""
         }>
           <li>
 
-            <button className={'block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded'} aria-current="page">Brands</button>
+            <button  className={'block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded'} aria-current="page">Brands</button>
           </li>
         </NavLink>
         <NavLink to='/cart' className={({ isActive, isPending }) =>
