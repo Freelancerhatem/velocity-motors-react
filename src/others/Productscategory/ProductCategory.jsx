@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const ProductCategory = ({categorydata}) => {
-    const {name,img} = categorydata
+    const {id,name,img} = categorydata
     return (
         <div>
-            <Link to='carlist'>
+            <Link to={`${id}`}>
             <div className='bg-slate-300 rounded-md  h-60 relative flex justify-center'>
                 <img className='h-full absolute ' src={img} alt="" />
                 <div className='absolute left-0 bg-gray-400 rounded-br-md px-4'>

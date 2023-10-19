@@ -12,6 +12,8 @@ import SignUp from './components/SignUp/SignUp';
 import Addproduct from './components/Addproduct/Addproduct';
 import Home from './components/Home/Home';
 import Carlist from './others/Carlist/Carlist';
+import AuthProvider from './components/AuthProvider/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -19,14 +21,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root></Root>,
     children:
-      [  
+      [
         {
           path: "/",
           element: <Home></Home>,
         },
         {
           path: "/about",
-          element: <About></About>,
+          element: <PrivateRoute><About></About></PrivateRoute>,
         },
         {
           path: "/signin",
@@ -38,11 +40,12 @@ const router = createBrowserRouter([
         },
         {
           path: "/addproduct",
-          element: <Addproduct></Addproduct>,
+          element: <PrivateRoute><Addproduct></Addproduct></PrivateRoute>,
         },
         {
-          path: "/carlist",
+          path: "/:id",
           element: <Carlist></Carlist>,
+          loader: () => fetch(`http://localhost:5000/bmw`)
         },
       ]
   },
@@ -50,6 +53,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

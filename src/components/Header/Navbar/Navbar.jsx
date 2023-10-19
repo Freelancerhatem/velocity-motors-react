@@ -1,7 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/images/logoicon.png'
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const{user,signOutuser}=useContext(AuthContext);
+  console.log(user)
     return (
         <div>
              <div>
@@ -29,27 +33,19 @@ const Navbar = () => {
         <span className="self-center text-base lg:text-2xl font-semibold whitespace-nowrap text-white">Velocity Motors</span>
       </span>
     </div>
+    
     <div className="order-2">
-    <div className="flex items-center gap-6">
-            <div className="flex items-center gap-1"><img src="" alt="" /><h1>name</h1></div>
-            <Link to='/signin'>
-            <button  className="btn-xs rounded-md lg:btn bg-white text-blue-400 hover:bg-blue-900 hover:text-white">login</button>
-            </Link>
-          </div>
-          
-    </div>
-    {/* <div className="order-2">
       {
         user ?
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-1"><img className="rounded-full w-4 lg:w-12" src={user.photoURL != null ? user.photoURL : '/src/assets/user.png'} alt="" /> <h1 className="font-medium text-xs lg:text-base text-white">{user.displayName != null ? user.displayName : 'user_' + user.email.slice(0, 5)}</h1></div>
-            <button onClick={handleSignOut} className="btn-xs rounded-md lg:btn bg-white text-orange-400 hover:bg-orange-400 hover:text-white">Log Out</button>
+            <div className="flex items-center gap-1"><img className="rounded-full w-4 lg:w-12" src={ user.photoURL } alt="" /> <h1 className="font-medium text-xs lg:text-base text-white">{user.displayName}</h1></div>
+            <button onClick={signOutuser} className="btn-xs rounded-md lg:btn bg-white text-orange-400 hover:bg-orange-400 hover:text-white">Log Out</button>
           </div>
           : <Link to='/signin'>
             <button className="btn-xs rounded-md md:btn bg-white text-orange-400 hover:bg-orange-400 hover:text-white">Sign in</button>
           </Link>
       }
-    </div> */}
+    </div>
     <div className="items-center hidden justify-between  w-full md:flex  md:w-auto " id="navbar-cta">
       <ul className="flex    font-medium  lg:p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-2 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <NavLink to='/' className={({ isActive, isPending }) =>

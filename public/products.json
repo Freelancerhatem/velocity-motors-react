@@ -1,35 +1,35 @@
 [
     {
-        "id": 1,
+        "id": "bmw",
         "name": "BMW",
         "img": "https://i.ibb.co/vkqFVgP/bmw.png"
       },
       
       {
-        "id": 2,
+        "id": "ford",
         "name": "FORD",
         "img": "https://i.ibb.co/4RF3NY8/ford.png"
       },
       
       {
-        "id": 3,
+        "id": "honda",
         "name": "HONDA",
         "img": "https://i.ibb.co/WgVwxkc/honda.png"
       },
       
       {
-        "id": 4,
+        "id": "volkswagen",
         "name": "VOLKSWAGEN",
         "img": "https://i.ibb.co/g3wsd01/Volkswagen.png"
       },
       
       {
-        "id": 5,
+        "id": "toyota",
         "name": "TOYOTA",
         "img": "https://i.ibb.co/JmXjRSv/toyota.png"
       },
       {
-        "id": 6,
+        "id": "mercedes",
         "name": "MERCEDES BENZ",
         "img": "https://i.ibb.co/fHVfC56/Mercedes-Benz.png"
       }

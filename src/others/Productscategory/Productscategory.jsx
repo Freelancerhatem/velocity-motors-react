@@ -12,7 +12,7 @@ const Productscategory = () => {
 
 
     }, [])
-    console.log(products)
+    
 
     return (
         <div>

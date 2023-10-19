@@ -1,8 +1,33 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Header/Navbar/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 
 const SignIn = () => {
+    const { signInuser,googleLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location =useLocation()
+
+    const handleSignin = e => {
+        e.preventDefault();
+        const form = e.target
+        const email = form.email.value;
+        const password = form.password.value;
+        signInuser(email, password)
+            .then(res => {
+                const user = res.user;
+                // console.log(user);
+                navigate(location?.state? location.state :'/')
+
+            })
+            .catch(err => {
+                const error = err.message;
+                console.log(error)
+            })
+    };
+    
     return (
         <div>
             <div className="bg-blue-300">
@@ -17,14 +42,14 @@ const SignIn = () => {
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Sign in to your account
                             </h1>
-                            <form className="space-y-4 md:space-y-6" action="#">
+                            <form className="space-y-4 md:space-y-6" onSubmit={handleSignin}>
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" />
+                                    <input type="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required />
                                 </div>
                                 <div>
                                     <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
+                                    <input type="password" name="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                                 </div>
                                 <div className="flex items-center justify-between">
 
@@ -37,6 +62,7 @@ const SignIn = () => {
                                         <button href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</button>
                                     </Link>
                                 </p>
+                                <button onClick={googleLogin} className="btn btn-outline">google <FcGoogle></FcGoogle></button>
                             </form>
                         </div>
                     </div>
