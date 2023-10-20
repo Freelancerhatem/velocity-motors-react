@@ -17,9 +17,9 @@ const Productscategory = () => {
     return (
         <div>
             <div>
-                <h1 className="text-center text-5xl font-extrabold mt-4">CHoose Your Brands</h1>
+                <h1 className="text-center text-xl md:text-5xl font-extrabold mt-4">CHoose Your Brands</h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 mx-auto px-14 gap-8 my-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 mx-auto px-14 gap-8 my-4 md:my-16">
                 {
                     products.map((categorydata, index) => <ProductCategory key={index} categorydata={categorydata}></ProductCategory>)
                 }

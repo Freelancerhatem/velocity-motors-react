@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/images/logoicon.png'
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { GrMenu } from "react-icons/gr";
 
 const Navbar = () => {
   const{user,signOutuser}=useContext(AuthContext);
@@ -10,12 +11,12 @@ const Navbar = () => {
         <div>
              <div>
 
-<nav className="bg-red-400 md:bg-transparent">
+<nav className="bg-blue-400 md:bg-transparent">
   <div className=" flex  flex-wrap items-center justify-between mx-auto py-1 md:py-0 px-2  md:px-2 lg:px-12">
 
     <div className="dropdown md:hidden">
       <label tabIndex={0} className="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+        <GrMenu></GrMenu>
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-1 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><Link to='/'>Home</Link></li>
