@@ -1,12 +1,16 @@
 
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/Header/Navbar/Navbar';
 
 const Carproducts = ({singleProduct}) => {
     const {image_url,name,price,rating,description,brand,_id} = singleProduct;
     return (
         <div>
-            <div className="w-full h-[400px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className='bg-gray-500'>
+                <Navbar></Navbar>
+            </div>
+            <div className="w-full mb-10 h-[400px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <a href="#">
                         <img className="h-[180px] w-full p-6 rounded-t-lg" src={image_url} alt="product image" />
                     </a>
@@ -35,7 +39,11 @@ const Carproducts = ({singleProduct}) => {
                         <div className="flex items-center justify-between">
                             <span className="text-xl font-bold text-gray-900 dark:text-white">$ {price}</span>
                             <Link to={`/details/${_id}`}>
-                            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Details</button>
+                            <button className="text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Details</button>
+
+                            </Link>
+                            <Link to={'/updatecart'}>
+                            <button className="text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
 
                             </Link>
                         </div>

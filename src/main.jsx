@@ -16,6 +16,8 @@ import AuthProvider from './components/AuthProvider/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Products from './others/Products/Products';
 import Details from './others/Details/Details';
+import Mycart from './others/Mycart/Mycart';
+import UpdateData from './others/UpdateData/UpdateData';
 
 
 const router = createBrowserRouter([
@@ -58,7 +60,18 @@ const router = createBrowserRouter([
           path:'/details/:id',
           element:<PrivateRoute><Details></Details></PrivateRoute>,
           loader:()=>fetch('http://localhost:5000/products')
+        },
+        {
+          path:'/mycart',
+          element:<PrivateRoute><Mycart></Mycart></PrivateRoute>,
+          loader:(params)=>fetch(`http://localhost:5000/details/${params._id}`)
+        },
+        {
+          path:'/updatecart',
+          element:<PrivateRoute><UpdateData></UpdateData></PrivateRoute>,
+          // loader:(params)=>fetch(`http://localhost:5000/details/${params._id}`)
         }
+        
       ]
   },
 

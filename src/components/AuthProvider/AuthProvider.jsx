@@ -18,7 +18,8 @@ const AuthProvider = ({children}) => {
         setLoading(true)
        return signInWithEmailAndPassword(auth,email,password)
     };
-    const googleLogin=e=>{
+    const googleLogin=()=>{
+        
         setLoading(true)
         return signInWithRedirect(auth, provider);
         
