@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Carproducts from "../Carproducts/Carproducts";
+import Navbar from "../../components/Header/Navbar/Navbar";
 
 
 const Carlist = () => {
@@ -12,7 +13,7 @@ const Carlist = () => {
     const { slider_1, slider_2, slider_3 } = carData;
     console.log(id)
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setAlldata(data))
     },[]);
@@ -21,6 +22,9 @@ const Carlist = () => {
 
     return (
         <div>
+            <div className="bg-gray-500">
+                <Navbar></Navbar>
+            </div>
             {/* carousel */}
             <div className="px-64 border">
                 <div className="carousel w-full h-[90vh] ">
@@ -51,10 +55,14 @@ const Carlist = () => {
             {/* carousel end */}
 
             {/* four product here */}
-            <div className="grid grid-cols-4 gap-10 mt-20 px-14">
+            <div className="">
+                <h1 className=""></h1>
+                <div className="grid grid-cols-4 gap-10 mt-20 px-14">
                 {
                     singleProducts.map((singleProduct,index)=><Carproducts key={index} singleProduct={singleProduct}></Carproducts>)
                 }
+                </div>
+               
                 
 
             </div>

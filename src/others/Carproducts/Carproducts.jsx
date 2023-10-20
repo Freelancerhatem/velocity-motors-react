@@ -7,9 +7,7 @@ const Carproducts = ({singleProduct}) => {
     const {image_url,name,price,rating,description,brand,_id} = singleProduct;
     return (
         <div>
-            <div className='bg-gray-500'>
-                <Navbar></Navbar>
-            </div>
+            
             <div className="w-full mb-10 h-[400px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <a href="#">
                         <img className="h-[180px] w-full p-6 rounded-t-lg" src={image_url} alt="product image" />

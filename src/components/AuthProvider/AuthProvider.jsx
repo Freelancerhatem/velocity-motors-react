@@ -50,7 +50,7 @@ const AuthProvider = ({children}) => {
         user
     }
         if(loading){
-            return 'loading'
+            return <span className="loading loading-dots loading-lg"></span>
         }
     
         else{

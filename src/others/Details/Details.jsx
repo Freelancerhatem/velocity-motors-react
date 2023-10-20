@@ -20,7 +20,7 @@ const Details = () => {
         e.preventDefault();
         
         
-        fetch(`http://localhost:5000/details/${id}`, {
+        fetch(`https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/details/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

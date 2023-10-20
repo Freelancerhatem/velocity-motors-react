@@ -12,7 +12,7 @@ const Addproduct = () => {
         const productData = { image_url, name, price, brand, type, description, rating };
 
 
-        fetch('http://localhost:5000/addproduct', {
+        fetch('https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/addproduct', {
             method: 'POST',
             headers: {
                 'Content-type': "application/json"

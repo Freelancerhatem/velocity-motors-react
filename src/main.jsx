@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         {
           path: "/products",
           element: <PrivateRoute><Products></Products></PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/products')
+          loader:()=>fetch('https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/products')
         },
         {
           path: "/:id",
@@ -59,17 +59,17 @@ const router = createBrowserRouter([
         {
           path:'/details/:id',
           element:<PrivateRoute><Details></Details></PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/products')
+          loader:()=>fetch('https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/products')
         },
         {
           path:'/mycart',
           element:<PrivateRoute><Mycart></Mycart></PrivateRoute>,
-          loader:(params)=>fetch(`http://localhost:5000/details/${params._id}`)
+          loader:(params)=>fetch(`https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/details/${params._id}`)
         },
         {
           path:'/updatecart',
           element:<PrivateRoute><UpdateData></UpdateData></PrivateRoute>,
-          // loader:(params)=>fetch(`http://localhost:5000/details/${params._id}`)
+          
         }
         
       ]
