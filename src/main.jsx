@@ -14,6 +14,7 @@ import Home from './components/Home/Home';
 import Carlist from './others/Carlist/Carlist';
 import AuthProvider from './components/AuthProvider/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Products from './others/Products/Products';
 
 
 const router = createBrowserRouter([
@@ -43,9 +44,14 @@ const router = createBrowserRouter([
           element: <PrivateRoute><Addproduct></Addproduct></PrivateRoute>,
         },
         {
+          path: "/products",
+          element: <PrivateRoute><Products></Products></PrivateRoute>,
+          loader:()=>fetch('http://localhost:5000/products')
+        },
+        {
           path: "/:id",
           element: <Carlist></Carlist>,
-          loader: () => fetch(`http://localhost:5000/bmw`)
+          loader: () => fetch('./products.json')
         },
       ]
   },

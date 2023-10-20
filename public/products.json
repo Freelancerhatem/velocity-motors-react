@@ -2,36 +2,54 @@
     {
         "id": "bmw",
         "name": "BMW",
-        "img": "https://i.ibb.co/vkqFVgP/bmw.png"
+        "img": "https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
       },
       
       {
         "id": "ford",
         "name": "FORD",
-        "img": "https://i.ibb.co/4RF3NY8/ford.png"
+        "img": "https://i.ibb.co/4RF3NY8/ford.png",
+        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
       },
       
       {
         "id": "honda",
         "name": "HONDA",
-        "img": "https://i.ibb.co/WgVwxkc/honda.png"
+        "img": "https://i.ibb.co/WgVwxkc/honda.png",
+        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
       },
       
       {
         "id": "volkswagen",
         "name": "VOLKSWAGEN",
-        "img": "https://i.ibb.co/g3wsd01/Volkswagen.png"
+        "img": "https://i.ibb.co/g3wsd01/Volkswagen.png",
+        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
       },
       
       {
         "id": "toyota",
         "name": "TOYOTA",
-        "img": "https://i.ibb.co/JmXjRSv/toyota.png"
+        "img": "https://i.ibb.co/JmXjRSv/toyota.png",
+        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
       },
       {
         "id": "mercedes",
         "name": "MERCEDES BENZ",
-        "img": "https://i.ibb.co/fHVfC56/Mercedes-Benz.png"
+        "img": "https://i.ibb.co/fHVfC56/Mercedes-Benz.png",
+        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
+        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
       }
       
       

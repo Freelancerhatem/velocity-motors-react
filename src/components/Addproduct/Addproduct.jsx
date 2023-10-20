@@ -90,7 +90,7 @@ const Addproduct = () => {
                             </label>
                             <label className="input-group input-group-vertical">
                                 <select name="type" id="">
-                                    <option value="phone">Phone</option>
+                                    <option value="car">Car</option>
                                     <option value="computer">Computer</option>
                                     <option value="headphone">Headphone</option>
                                 </select>
