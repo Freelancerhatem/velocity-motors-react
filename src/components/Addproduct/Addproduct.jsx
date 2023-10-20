@@ -1,3 +1,5 @@
+import Navbar from "../Header/Navbar/Navbar";
+
 const Addproduct = () => {
     const handleProducts = e => {
         e.preventDefault();
@@ -31,6 +33,10 @@ const Addproduct = () => {
     }
     return (
         <div className="">
+            <div className="bg-blue-400">
+                <Navbar></Navbar>
+            </div>
+            <div className="mt-12">
 
             <form onSubmit={handleProducts}>
                 <div className="grid grid-cols-2  w-full gap-12 px-14">
@@ -115,10 +121,11 @@ const Addproduct = () => {
 
                 </div>
                 <div className="px-14 mt-6">
-                    <button type="submit" className="btn btn-primary w-full">Add Product</button>
+                    <button type="submit" className="btn bg-blue-400 text-white w-full">Add Product</button>
 
                 </div>
             </form>
+            </div>
 
         </div>
     );

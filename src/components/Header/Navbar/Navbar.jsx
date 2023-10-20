@@ -5,7 +5,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
   const{user,signOutuser}=useContext(AuthContext);
-  console.log(user)
+  // console.log(user)
     return (
         <div>
              <div>
@@ -20,8 +20,8 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-1 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/signin'>Sign In</Link></li>
-        <li><Link to='/signup'>Sign Up</Link></li>
-        <li><Link to='/dashboard'>DashBoard</Link></li>
+        <li><Link to='/signup'>Registration</Link></li>
+        <li><Link to='/mycart'>My cart</Link></li>
       </ul>
     </div>
 
@@ -38,11 +38,11 @@ const Navbar = () => {
       {
         user ?
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-1"><img className="rounded-full w-4 lg:w-12" src={ user.photoURL } alt="" /> <h1 className="font-medium text-xs lg:text-base text-white">{user.displayName}</h1></div>
-            <button onClick={signOutuser} className="btn-xs rounded-md lg:btn bg-white text-orange-400 hover:bg-orange-400 hover:text-white">Log Out</button>
+            <div className="flex items-center gap-1"><img className="rounded-full w-4 lg:w-12" src={ user?.photoURL? user.photoURL : '' } alt="" /> <h1 className="font-medium text-xs lg:text-base text-white">{user?.displayName ?user.displayName :''}</h1></div>
+            <button onClick={signOutuser} className="btn-xs rounded-md lg:btn bg-white text-blue-400 hover:bg-blue-400 hover:text-white">Log Out</button>
           </div>
           : <Link to='/signin'>
-            <button className="btn-xs rounded-md md:btn bg-white text-orange-400 hover:bg-orange-400 hover:text-white">Sign in</button>
+            <button className="btn-xs rounded-md md:btn bg-white text-orange-400 hover:bg-blue-400 hover:text-white">Sign in</button>
           </Link>
       }
     </div>
@@ -57,20 +57,13 @@ const Navbar = () => {
           </li>
         </NavLink>
 
-        <NavLink to='/about' className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "border-b-2 border-white" : ""
-        }>
-          <li>
-
-            <button className="block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded" aria-current="page">About Us</button>
-          </li>
-        </NavLink>
+       
         <NavLink to='/signup' className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "border-b-2 border-white" : ""
         }>
           <li>
 
-            <button className="block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded" aria-current="page">Services</button>
+            <button className="block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded" aria-current="page">Registration</button>
           </li>
         </NavLink>
         <NavLink to='/addproduct' className={({ isActive, isPending }) =>
@@ -81,14 +74,7 @@ const Navbar = () => {
             <button className={'block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded'} aria-current="page">Add Product</button>
           </li>
         </NavLink>
-        <NavLink to='/brands' className={({ isActive, isPending }) =>
-          isPending ? "" : isActive ? "border-b-2 border-white" : ""
-        }>
-          <li>
-
-            <button  className={'block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded'} aria-current="page">Brands</button>
-          </li>
-        </NavLink>
+        
         <NavLink to='/mycart' className={({ isActive, isPending }) =>
           isPending ? "pending" : isActive ? "border-b-2 border-white" : ""
         }>
@@ -97,14 +83,7 @@ const Navbar = () => {
             <button className={'block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded'} aria-current="page">My Cart</button>
           </li>
         </NavLink>
-        <NavLink to='/dashboard' className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "border-b-2 border-white" : ""
-        }>
-          <li>
-
-            <button className={'block py-2 pl-1 lg:pl-3 lg:pr-4 text-white  rounded'} aria-current="page">Contact us</button>
-          </li>
-        </NavLink>
+        
       </ul>
     </div>
   </div>

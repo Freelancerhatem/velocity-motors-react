@@ -3,12 +3,10 @@
 const Footer = () => {
     return (
         <div id="footer">
-             <footer className="footer grid grid-cols-3 gap-10 lg:gap-0  bg-gradient-to-tr from-blue-400 to-blue-900 p-4 lg:p-12 mt-0 lg:mt-4  text-base-content">
+             <footer className="footer grid grid-cols-3 gap-10 lg:gap-0  bg-gradient-to-tr from-blue-500 to-blue-300 p-4 lg:p-12 mt-0 lg:mt-4  text-base-content">
         <nav className="col-span-1">
           <header className="footer-title">Services</header>
           <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
           <a className="link link-hover">Advertisement</a>
         </nav>
         <nav className="">

@@ -3,6 +3,7 @@ import Navbar from "../Header/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
+import swal from 'sweetalert';
 
 
 const SignIn = () => {
@@ -19,12 +20,16 @@ const SignIn = () => {
             .then(res => {
                 const user = res.user;
                 // console.log(user);
+                swal("Good job!", "Login Succesfully!", "success");
                 navigate(location?.state? location.state :'/')
 
             })
             .catch(err => {
                 const error = err.message;
                 console.log(error)
+                navigate('/signin')
+                swal("Warning!", "Login Failed!", "error");
+                
             })
     };
     
@@ -55,14 +60,15 @@ const SignIn = () => {
 
 
                                 </div>
-                                <button type="submit" className="btn bg-blue-700 w-full">Sign in</button>
+                                <button type="submit" className="btn bg-blue-400 text-white  hover:bg-blue-300 w-full">Sign in</button>
                                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                                     Don’t have an account yet?
                                     <Link to='/signup'>
-                                        <button href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</button>
+                                        <button href="#" className="font-medium text-blue-500 ml-1  hover:underline dark:text-primary-500">Sign up</button>
                                     </Link>
                                 </p>
-                                <button onClick={googleLogin} className="btn btn-outline">google <FcGoogle></FcGoogle></button>
+                                <p className="w-full text-center border-b-2">or</p>
+                                <button onClick={googleLogin} className="btn w-full btn-outline">login with google <FcGoogle></FcGoogle></button>
                             </form>
                         </div>
                     </div>

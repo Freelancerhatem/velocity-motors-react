@@ -18,12 +18,14 @@ import Products from './others/Products/Products';
 import Details from './others/Details/Details';
 import Mycart from './others/Mycart/Mycart';
 import UpdateData from './others/UpdateData/UpdateData';
+import Errorpage from './components/Errorpage/Errorpage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Errorpage></Errorpage>,
     children:
       [
         {

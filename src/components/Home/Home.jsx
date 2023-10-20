@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Productscategory from "../../others/Productscategory/Productscategory";
 import Banner from "../Header/Banner/Banner";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Footer from "../Footer/Footer";
 
 
 
@@ -12,6 +13,7 @@ const Home = () => {
         <div>
              <Banner></Banner>
             <Productscategory></Productscategory>
+            <Footer></Footer>
         </div>
     );
 };
