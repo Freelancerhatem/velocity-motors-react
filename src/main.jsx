@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         {
           path: "/:id",
           element: <Carlist></Carlist>,
-          loader: () => fetch('./products.json')
+          loader: () => fetch('/products.json')
         },
         {
           path:'/details/:id',

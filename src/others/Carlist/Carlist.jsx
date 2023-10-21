@@ -14,6 +14,7 @@ const Carlist = () => {
 
     const carData = carsData.find(mycar => mycar.id == id);
     const { slider_1, slider_2, slider_3 } = carData;
+    console.log(carData)
     console.log(id)
     useEffect(() => {
         fetch('https://cars-data-server-side.vercel.app/products')
