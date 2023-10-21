@@ -88,7 +88,8 @@ const SignIn = () => {
                                         <button href="#" className="font-medium text-blue-500 ml-1  hover:underline dark:text-primary-500">Sign up</button>
                                     </Link>
                                 </p>
-                                <p className="w-full text-center border-b-2">or</p>
+                                
+                                <div className="divider">OR</div>
                                 <button onClick={handleGoogle} className="btn w-full btn-outline">login with google <FcGoogle></FcGoogle></button>
                             </form>
                         </div>
