@@ -89,7 +89,7 @@ const Navbar = () => {
                     <img src={user.photoURL} />
                   </div>
                 </label>
-                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-blue-400 rounded-box w-52">
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52">
                   <li>
                     <p className="justify-between">
                     <h1 className="font-medium text-xs lg:text-base ">{user?.displayName ? user.displayName : ''}</h1>
