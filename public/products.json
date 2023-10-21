@@ -12,44 +12,44 @@
         "id": "ford",
         "name": "FORD",
         "img": "https://i.ibb.co/4RF3NY8/ford.png",
-        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
+        "slider_1":"https://i.ibb.co/M9g4sZx/ford1.jpg",
+        "slider_2":"https://i.ibb.co/nrzwKt1/ford2.jpg",
+        "slider_3":"https://i.ibb.co/8Yhjnzc/ford3.jpg"
       },
       
       {
         "id": "honda",
         "name": "HONDA",
         "img": "https://i.ibb.co/WgVwxkc/honda.png",
-        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
+        "slider_1":"https://i.ibb.co/Tk60SJ7/honda1.png",
+        "slider_2":"https://i.ibb.co/qF0G7k5/honda2.jpg",
+        "slider_3":"https://i.ibb.co/P41mwDj/honda3.png"
       },
       
       {
         "id": "volkswagen",
         "name": "VOLKSWAGEN",
         "img": "https://i.ibb.co/g3wsd01/Volkswagen.png",
-        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
+        "slider_1":"https://i.ibb.co/3zBZj0R/Volkswagen1.jpg",
+        "slider_2":"https://i.ibb.co/C75yTCn/Volkswagen2.jpg",
+        "slider_3":"https://i.ibb.co/BPbfF22/Volkswagen3.jpg"
       },
       
       {
         "id": "toyota",
         "name": "TOYOTA",
         "img": "https://i.ibb.co/JmXjRSv/toyota.png",
-        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
+        "slider_1":"https://i.ibb.co/S6Z5K7m/toyota1.jpg",
+        "slider_2":"https://i.ibb.co/wdy9F8B/toyota2.jpg",
+        "slider_3":"https://i.ibb.co/VwqtBW9/toyota3.jpg"
       },
       {
         "id": "mercedes",
         "name": "MERCEDES BENZ",
         "img": "https://i.ibb.co/fHVfC56/Mercedes-Benz.png",
-        "slider_1":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_2":"https://i.ibb.co/vkqFVgP/bmw.png",
-        "slider_3":"https://i.ibb.co/vkqFVgP/bmw.png"
+        "slider_1":"https://i.ibb.co/3zBZj0R/Volkswagen1.jpg",
+        "slider_2":"https://i.ibb.co/C75yTCn/Volkswagen2.jpg",
+        "slider_3":"https://i.ibb.co/BPbfF22/Volkswagen3.jpg"
       }
       
       
