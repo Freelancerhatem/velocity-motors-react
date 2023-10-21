@@ -47,7 +47,8 @@ const AuthProvider = ({children}) => {
         googleLogin,
         signOutuser,
         setUser,
-        user
+        user,
+        setLoading
     }
         if(loading){
             return <span className="loading loading-dots loading-lg"></span>

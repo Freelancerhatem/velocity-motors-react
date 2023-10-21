@@ -46,7 +46,7 @@ const Mycart = () => {
                 <Navbar></Navbar>
             </div>
 
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-1 md:grid-cols-4 md:px-32 mx-auto'>
                 {
                     cartRemainig?.map((cartdata, index) => <Mycartdata key={index} cartdata={cartdata} handleDelete={handleDelete}></Mycartdata>)
                 }
