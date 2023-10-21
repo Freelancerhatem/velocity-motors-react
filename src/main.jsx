@@ -52,12 +52,12 @@ const router = createBrowserRouter([
         {
           path: "/products",
           element: <PrivateRoute><Products></Products></PrivateRoute>,
-          loader:()=>fetch('https://cars-data-server-side.vercel.app/products')
+          // loader:()=>fetch('https://cars-data-server-side.vercel.app/products')
         },
         {
           path: "/:id",
           element: <Carlist></Carlist>,
-          loader: () => fetch('/products.json')
+          loader: () => fetch('https://cars-data-server-side.vercel.app/categories')
         },
         {
           path:'/details/:id',

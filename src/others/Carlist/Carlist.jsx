@@ -9,7 +9,8 @@ import NoData from "../NoData/NoData";
 const Carlist = () => {
     const {loading} = useContext(AuthContext);
     const [allData, setAlldata] = useState([])
-    const carsData = useLoaderData();
+    // const carsData = useLoaderData();
+    const[carsData,setCarsdata]= useState([]);
     const { id } = useParams();
 
     const carData = carsData.find(mycar => mycar.id == id);
@@ -22,7 +23,11 @@ const Carlist = () => {
             .then(data => setAlldata(data))
     }, []);
     const singleProducts = allData.filter(singledata => singledata.brand == id);
-    console.log(loading)
+    useEffect(()=>{
+        fetch('https://cars-data-server-side.vercel.app/categories')
+        .then(res=>res.json())
+        .then(data=>setCarsdata(data));
+    },[])
 
 
 

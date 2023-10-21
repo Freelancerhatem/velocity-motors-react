@@ -9,8 +9,7 @@ import Contact from "../Contact/Contact";
 
 
 const Home = () => {
-    const{name}=useContext(AuthContext);
-    console.log(name)
+    
     return (
         <div>
              <Banner></Banner>
