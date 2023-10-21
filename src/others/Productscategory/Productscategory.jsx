@@ -12,13 +12,7 @@ const Productscategory = () => {
 
 
     }, []);
-    // useEffect(()=>{
-    //     fetch('http://localhost:5000/category')
-    //     .then(res=>res.json())
-    //     .then(catData=>{
-    //         console.log(catData);
-    //     })
-    // },[])
+    
     
 
     return (
