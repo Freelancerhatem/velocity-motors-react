@@ -14,7 +14,7 @@ const Addproduct = () => {
         const productData = { image_url, name, price, brand, type, description, rating };
 
 
-        fetch('https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/addproduct', {
+        fetch('https://cars-data-server-side.vercel.app/addproduct', {
             method: 'POST',
             headers: {
                 'Content-type': "application/json"
@@ -39,7 +39,7 @@ const Addproduct = () => {
             <div className="mt-12">
 
             <form onSubmit={handleProducts}>
-                <div className="grid grid-cols-2  w-full gap-12 px-14">
+                <div className="grid md:grid-cols-2 grid-cols-1 w-full md:gap-12 px-6 md:px-14">
 
 
                     <div className="w-full">

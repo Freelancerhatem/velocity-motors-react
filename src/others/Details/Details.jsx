@@ -5,12 +5,13 @@ import swal from 'sweetalert';
 import Navbar from '../../components/Header/Navbar/Navbar';
 import { useContext } from 'react';
 import { AuthContext } from '../../components/AuthProvider/AuthProvider';
+// import { Rating } from "@material-tailwind/react";
 
 const Details = () => {
     const { user } = useContext(AuthContext)
     const descriptionData = useLoaderData();
     const { id } = useParams();
-    const detailsdata = descriptionData.filter(detailsObject => detailsObject._id == id)
+    const detailsdata =descriptionData && descriptionData.filter(detailsObject => detailsObject._id == id)
     const [{ description, image_url, name,rating }] = detailsdata;
     const cartObejectforBackend = { description, image_url, name, user }
 
@@ -20,7 +21,7 @@ const Details = () => {
         e.preventDefault();
 
 
-        fetch(`https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/details/${id}`, {
+        fetch(`https://cars-data-server-side.vercel.app/details/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -87,6 +88,9 @@ const Details = () => {
                                     ></path>
                                 </svg>
                                 {rating}
+
+                            {/* <Rating value={parseFloat(rating)} />                                                     */}
+                                
                             </p>
                         </div>
                         <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-700">

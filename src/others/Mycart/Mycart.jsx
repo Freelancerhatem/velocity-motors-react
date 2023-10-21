@@ -22,7 +22,7 @@ const Mycart = () => {
     const handleDelete = (id) => {
         
 
-        fetch(`https://cars-data-server-side-alftodujj-freelancerhatem.vercel.app/details/${id}`,{
+        fetch(`https://cars-data-server-side.vercel.app/details/${id}`,{
             method: "DELETE",
         })
             .then((res) => res.json())
