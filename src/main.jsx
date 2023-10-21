@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         {
           path: "/:id",
           element: <Carlist></Carlist>,
-          loader: () => fetch('https://cars-data-server-side.vercel.app/categories')
+          loader: () => fetch('/products.json')
         },
         {
           path:'/details/:id',
